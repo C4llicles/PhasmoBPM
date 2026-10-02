@@ -1,0 +1,17 @@
+# Environnement virtuel
+PhasmoBPMvenv/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Éditeurs
+.vscode/
+.idea/
