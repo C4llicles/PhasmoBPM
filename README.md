@@ -1,18 +1,19 @@
 # PhasmoBPM
 
 ### Information
-PhasmoBPM est un outil pour les joueurs de Phasmophobia, surtout ceux qui ont du mal pour définir la vitesse du phantome.
-Il suffit d'appuyer sur la touche Espace pendant que le phantome chasse, en suivant le rythme de ses pas, et PhasmoBPM calcule sa vitesse en temps réel et propose la liste des phantomes avec la vitesse correspondante.
-Il y a aussi un minuteur qui peut aider à voir si certains phantômes peuvent chasser à un moment précis.
-Nous prévoyons également d'ajouter un calculateur de santé mentale, qui aurait aidé à éstimer le niveau approximatif de santé mentale du joueur.
+PhasmoBPM est un outil pour les joueurs de Phasmophobia, surtout pour ceux qui ont du mal à définir la vitesse du fantôme.  
+Il suffit d'appuyer sur la touche **Espace** pendant que le fantôme chasse, en suivant le rythme de ses pas, et PhasmoBPM calcule sa vitesse en temps réel et propose la liste des fantômes avec la vitesse correspondante.  
+Il y a aussi un minuteur qui peut aider à voir si certains fantômes peuvent chasser à un moment précis.  
+Nous prévoyons également d'ajouter un calculateur de santé mentale, qui aiderait à estimer le niveau approximatif de santé mentale du joueur.
 
 ### Outils
-L'application est codé en Python avec PySide6 afin de permettre à PhasmoBPM d'être affiché au premier plan et de lire l'état de la barre Espace lorsque Phasmophobia a aussi le focus.
+L'application est codée en Python avec PySide6 pour l'interface et tournera dans un premier temps sous Windows, permettant à PhasmoBPM de s'afficher au premier plan et de détecter l'appui sur la barre Espace lorsque Phasmophobia est au premier plan.
 
 ### Aperçu
 <img width="2557" height="1437" alt="phasmo_preview" src="https://github.com/user-attachments/assets/40c99480-79a9-4eb9-b2da-e5695369a653" />
-Voici l'interface utilisateur que nous voulons donner au produit final. Les éléments principaux sont :
 
-- Un minuteur en haut à gauche, avec des icones du Démon et de l'Esprit, éventuellement en gris lorsque le joueur a communiqué le fait d'avoir utilisé un encens.
-- Un calculateur de vitesse en haut à droite, avec une animation visuele lorsque l'utilisateur appuye sur l'espace, ainsi que le BPM et la vitesse en m/s affiché.
-- Un calculateur de santé mentale en bas à gauche, affichant le niveau approximatif de santé mentale du joueur. Le calcul sera fait à partir des préréglages indiqués par le joueur, le temps du début de la partie, et les différents événements également signalés par le joueur.
+Voici l'interface utilisateur que nous souhaitons pour le produit final. Les éléments principaux sont :
+
+- Un minuteur en haut à gauche, avec les icônes du Démon et de l'Esprit, qui s'allumeront au bon moment après que le joueur a indiqué avoir utilisé un encens.
+- Un calculateur de vitesse en haut à droite, avec une animation visuelle lorsque l'utilisateur appuie sur Espace, ainsi que le BPM et la vitesse en m/s affichés.
+- Un calculateur de santé mentale en bas à gauche, affichant le niveau approximatif de santé mentale du joueur. Le calcul sera fait à partir des préréglages indiqués par le joueur, du temps écoulé depuis le début de la partie et des différents événements également signalés par le joueur.
