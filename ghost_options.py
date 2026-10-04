@@ -18,6 +18,7 @@ class Dayan(Ghost):
         super().__init__(
             name="Dayan",
             min_speed=1.2,
+            base_speed=1.7,
             max_speed=2.25,
         )
 
@@ -25,10 +26,14 @@ class Deildegast(Ghost):
     def __init__(self):
         super().__init__(
             name="Deildegast",
-            min_speed=0.4,
             base_speed=3.0,
-            range=True
+            los = False
         )
+
+    def switch_items_Deildegast(self):
+        self.base_speed = 0.4
+        self.max_speed = 1.0
+        self.range = True
 
 class Demon(Ghost):
     def __init__(self):
@@ -42,6 +47,7 @@ class Deogen(Ghost):
             name="Deogen",
             min_speed=0.4,
             max_speed=3,
+            los = False
         )
 
 class Gallu(Ghost):
@@ -66,7 +72,8 @@ class Hantu(Ghost):
             min_speed=1.4,
             max_speed=2.7,
             los_max_speed=2.7,
-            range=True
+            range=True,
+            los = False
         )
 
 class Jinn(Ghost):
@@ -159,6 +166,7 @@ class Revenant(Ghost):
             name="Revenant",
             base_speed=1.0,
             max_speed=3.0,
+            los = False
         )
 
 class Shade(Ghost):
@@ -179,7 +187,8 @@ class Thaye(Ghost):
             name="Thaye",
             base_speed=2.75,
             min_speed=1.0,
-            range=True
+            range=True,
+            los = False
         )
 
 class TheMimic(Ghost):
@@ -218,3 +227,36 @@ class Yurei(Ghost):
         super().__init__(
             name="Yurei",
         )
+
+GHOSTS = [
+        Aswang(),
+        Banshee(),
+        Dayan(),
+        Deildegast(),
+        Demon(),
+        Deogen(),
+        Gallu(),
+        Goryo(),
+        Hantu(),
+        Jinn(),
+        Kormos(),
+        Mare(),
+        Moroi(),
+        Myling(),
+        Obake(),
+        Obambo(),
+        Oni(),
+        Onryo(),
+        Phantom(),
+        Poltergeist(),
+        Raiju(),
+        Revenant(),
+        Shade(),
+        Spirit(),
+        Thaye(),
+        TheMimic(),
+        TheTwins(),
+        Wraith(),
+        Yokai(),
+        Yurei()
+    ]

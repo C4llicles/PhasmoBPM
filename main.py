@@ -1,8 +1,8 @@
 import time
 
 from bpm import BpmTracker
-from ghost_options import *
 from ghost_speed import convert_bpm_to_speed
+from ghost_options import GHOSTS
 
 
 def get_possible_ghosts(speed, ghosts):
@@ -41,39 +41,6 @@ def display_result(tracker, ghosts):
 def main():
     tracker = BpmTracker()
 
-    ghosts = [
-        Aswang(),
-        Banshee(),
-        Dayan(),
-        Deildegast(),
-        Demon(),
-        Deogen(),
-        Gallu(),
-        Goryo(),
-        Hantu(),
-        Jinn(),
-        Kormos(),
-        Mare(),
-        Moroi(),
-        Myling(),
-        Obake(),
-        Obambo(),
-        Oni(),
-        Onryo(),
-        Phantom(),
-        Poltergeist(),
-        Raiju(),
-        Revenant(),
-        Shade(),
-        Spirit(),
-        Thaye(),
-        TheMimic(),
-        TheTwins(),
-        Wraith(),
-        Yokai(),
-        Yurei()
-    ]
-
     print("=== PhasmoBPM - Détection de fantômes ===")
     print("Appuie sur Entrée au rythme des pas.")
     print("Tape r puis Entrée pour réinitialiser.")
@@ -92,7 +59,7 @@ def main():
             continue
 
         tracker.add_beat(time.perf_counter())
-        display_result(tracker, ghosts)
+        display_result(tracker, GHOSTS)
 
 
 if __name__ == "__main__":
