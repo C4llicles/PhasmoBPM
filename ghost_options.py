@@ -1,5 +1,6 @@
 from ghost import Ghost
 
+
 class Aswang(Ghost):
     def __init__(self):
         super().__init__(
@@ -7,11 +8,13 @@ class Aswang(Ghost):
             base_speed=1.53,
         )
 
+
 class Banshee(Ghost):
     def __init__(self):
         super().__init__(
             name="Banshee",
         )
+
 
 class Dayan(Ghost):
     def __init__(self):
@@ -22,18 +25,16 @@ class Dayan(Ghost):
             max_speed=2.25,
         )
 
+
 class Deildegast(Ghost):
     def __init__(self):
-        super().__init__(
-            name="Deildegast",
-            base_speed=3.0,
-            los = False
-        )
+        super().__init__(name="Deildegast", base_speed=3.0, los=False)
 
     def switch_items_Deildegast(self):
         self.base_speed = 0.4
         self.max_speed = 1.0
         self.range = True
+
 
 class Demon(Ghost):
     def __init__(self):
@@ -41,14 +42,11 @@ class Demon(Ghost):
             name="Demon",
         )
 
+
 class Deogen(Ghost):
     def __init__(self):
-        super().__init__(
-            name="Deogen",
-            min_speed=0.4,
-            max_speed=3,
-            los = False
-        )
+        super().__init__(name="Deogen", min_speed=0.4, max_speed=3, los=False)
+
 
 class Gallu(Ghost):
     def __init__(self):
@@ -59,11 +57,13 @@ class Gallu(Ghost):
             max_speed=1.96,
         )
 
+
 class Goryo(Ghost):
     def __init__(self):
         super().__init__(
             name="Goryo",
         )
+
 
 class Hantu(Ghost):
     def __init__(self):
@@ -73,24 +73,19 @@ class Hantu(Ghost):
             max_speed=2.7,
             los_max_speed=2.7,
             range=True,
-            los = False
+            los=False,
         )
+
 
 class Jinn(Ghost):
     def __init__(self):
-        super().__init__(
-            name="Jinn",
-            max_speed=2.5,
-            range=False
-        )
+        super().__init__(name="Jinn", max_speed=2.5, range=False)
+
 
 class Kormos(Ghost):
     def __init__(self):
-        super().__init__(
-            name="Kormos",
-            max_speed=2.21,
-            range=False
-        )
+        super().__init__(name="Kormos", max_speed=2.21, range=False)
+
 
 class Mare(Ghost):
     def __init__(self):
@@ -98,15 +93,13 @@ class Mare(Ghost):
             name="Mare",
         )
 
+
 class Moroi(Ghost):
     def __init__(self):
         super().__init__(
-            name="Moroi",
-            base_speed=1.5,
-            max_speed=2.25,
-            los_max_speed=3.71,
-            range=True
+            name="Moroi", base_speed=1.5, max_speed=2.25, los_max_speed=3.71, range=True
         )
+
 
 class Myling(Ghost):
     def __init__(self):
@@ -114,11 +107,13 @@ class Myling(Ghost):
             name="Myling",
         )
 
+
 class Obake(Ghost):
     def __init__(self):
         super().__init__(
             name="Obake",
         )
+
 
 class Obambo(Ghost):
     def __init__(self):
@@ -128,11 +123,13 @@ class Obambo(Ghost):
             max_speed=1.96,
         )
 
+
 class Oni(Ghost):
     def __init__(self):
         super().__init__(
             name="Oni",
         )
+
 
 class Onryo(Ghost):
     def __init__(self):
@@ -140,17 +137,20 @@ class Onryo(Ghost):
             name="Onryo",
         )
 
+
 class Phantom(Ghost):
     def __init__(self):
         super().__init__(
             name="Phantom",
         )
 
+
 class Poltergeist(Ghost):
     def __init__(self):
         super().__init__(
             name="Poltergeist",
         )
+
 
 class Raiju(Ghost):
     def __init__(self):
@@ -160,14 +160,11 @@ class Raiju(Ghost):
             max_speed=2.5,
         )
 
+
 class Revenant(Ghost):
     def __init__(self):
-        super().__init__(
-            name="Revenant",
-            base_speed=1.0,
-            max_speed=3.0,
-            los = False
-        )
+        super().__init__(name="Revenant", base_speed=1.0, max_speed=3.0, los=False)
+
 
 class Shade(Ghost):
     def __init__(self):
@@ -175,21 +172,20 @@ class Shade(Ghost):
             name="Shade",
         )
 
+
 class Spirit(Ghost):
     def __init__(self):
         super().__init__(
             name="Spirit",
         )
 
+
 class Thaye(Ghost):
     def __init__(self):
         super().__init__(
-            name="Thaye",
-            base_speed=2.75,
-            min_speed=1.0,
-            range=True,
-            los = False
+            name="Thaye", base_speed=2.75, min_speed=1.0, range=True, los=False
         )
+
 
 class TheMimic(Ghost):
     def __init__(self):
@@ -202,6 +198,7 @@ class TheMimic(Ghost):
             range=True,
         )
 
+
 class TheTwins(Ghost):
     def __init__(self):
         super().__init__(
@@ -210,11 +207,13 @@ class TheTwins(Ghost):
             max_speed=1.9,
         )
 
+
 class Wraith(Ghost):
     def __init__(self):
         super().__init__(
             name="Wraith",
         )
+
 
 class Yokai(Ghost):
     def __init__(self):
@@ -222,41 +221,43 @@ class Yokai(Ghost):
             name="Yokai",
         )
 
+
 class Yurei(Ghost):
     def __init__(self):
         super().__init__(
             name="Yurei",
         )
 
+
 GHOSTS = [
-        Aswang(),
-        Banshee(),
-        Dayan(),
-        Deildegast(),
-        Demon(),
-        Deogen(),
-        Gallu(),
-        Goryo(),
-        Hantu(),
-        Jinn(),
-        Kormos(),
-        Mare(),
-        Moroi(),
-        Myling(),
-        Obake(),
-        Obambo(),
-        Oni(),
-        Onryo(),
-        Phantom(),
-        Poltergeist(),
-        Raiju(),
-        Revenant(),
-        Shade(),
-        Spirit(),
-        Thaye(),
-        TheMimic(),
-        TheTwins(),
-        Wraith(),
-        Yokai(),
-        Yurei()
-    ]
+    Aswang(),
+    Banshee(),
+    Dayan(),
+    Deildegast(),
+    Demon(),
+    Deogen(),
+    Gallu(),
+    Goryo(),
+    Hantu(),
+    Jinn(),
+    Kormos(),
+    Mare(),
+    Moroi(),
+    Myling(),
+    Obake(),
+    Obambo(),
+    Oni(),
+    Onryo(),
+    Phantom(),
+    Poltergeist(),
+    Raiju(),
+    Revenant(),
+    Shade(),
+    Spirit(),
+    Thaye(),
+    TheMimic(),
+    TheTwins(),
+    Wraith(),
+    Yokai(),
+    Yurei(),
+]

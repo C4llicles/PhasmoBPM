@@ -1,8 +1,8 @@
 import time
 
 from bpm import BpmTracker
-from ghost_speed import convert_bpm_to_speed
 from ghost_options import GHOSTS
+from ghost_speed import convert_bpm_to_speed
 
 
 def get_possible_ghosts(speed, ghosts):
