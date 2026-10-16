@@ -1,5 +1,7 @@
 from collections import deque
+
 from config import DEFAULT_MAX_TAPS, EXPIRATION_DELAY, MINIMUM_INTERVAL
+
 
 class BpmTracker:
     def __init__(self):

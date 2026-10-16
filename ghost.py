@@ -1,7 +1,17 @@
 from config import BASE_SPEED, LOS_MULTIPLIER, TOLERANCE
 
+
 class Ghost:
-    def __init__(self, name, base_speed=BASE_SPEED, min_speed=None, max_speed=None, range=False, los_max_speed=None, los=True):
+    def __init__(
+        self,
+        name,
+        base_speed=BASE_SPEED,
+        min_speed=None,
+        max_speed=None,
+        range=False,
+        los_max_speed=None,
+        los=True,
+    ):
         self.name = name
         self.base_speed = base_speed
 
@@ -35,7 +45,11 @@ class Ghost:
 
             return minimum <= speed <= maximum
         else:
-            if self.min_speed - tolerance <= speed <= self.min_speed + tolerance or self.base_speed - tolerance <= speed <= self.base_speed + tolerance or self.max_speed - tolerance <= speed <= self.max_speed + tolerance:
+            if (
+                self.min_speed - tolerance <= speed <= self.min_speed + tolerance
+                or self.base_speed - tolerance <= speed <= self.base_speed + tolerance
+                or self.max_speed - tolerance <= speed <= self.max_speed + tolerance
+            ):
                 return True
             return False
 
@@ -49,6 +63,14 @@ class Ghost:
 
             return minimum <= speed <= maximum
         else:
-            if self.min_speed - tolerance <= speed <= self.min_speed*LOS_MULTIPLIER + tolerance or self.base_speed - tolerance <= speed <= self.base_speed*LOS_MULTIPLIER + tolerance or self.max_speed - tolerance <= speed <= self.los_max_speed + tolerance:
+            if (
+                self.min_speed - tolerance
+                <= speed
+                <= self.min_speed * LOS_MULTIPLIER + tolerance
+                or self.base_speed - tolerance
+                <= speed
+                <= self.base_speed * LOS_MULTIPLIER + tolerance
+                or self.max_speed - tolerance <= speed <= self.los_max_speed + tolerance
+            ):
                 return True
             return False

@@ -1,8 +1,10 @@
 import time
+from queue import Empty, SimpleQueue
 
 from bpm import BpmTracker
 from ghost_options import GHOSTS
 from ghost_speed import convert_bpm_to_speed
+from input_windows import WindowsKeyboardListener
 
 
 def get_possible_ghosts(speed, ghosts):
@@ -40,26 +42,32 @@ def display_result(tracker, ghosts):
 
 def main():
     tracker = BpmTracker()
+    tap_queue = SimpleQueue()
+    listener = WindowsKeyboardListener(tap_queue, only_game=True)
 
     print("=== PhasmoBPM - Détection de fantômes ===")
-    print("Appuie sur Entrée au rythme des pas.")
-    print("Tape r puis Entrée pour réinitialiser.")
-    print("Tape q puis Entrée pour quitter.\n")
+    print("Appuie sur Espace dans Phasmophobia au rythme des pas.")
+    print("Ctrl+C dans ce terminal pour quitter.\n")
 
-    while True:
-        command = input("> ").strip().lower()
+    try:
+        listener.start()
 
-        if command == "q":
-            print("Fermeture.")
-            break
+        while True:
+            try:
+                timestamp = tap_queue.get(timeout=0.1)
+            except Empty:
+                if tracker.update(time.perf_counter()):
+                    print("\nMesure expirée.")
+                continue
 
-        if command == "r":
-            tracker.reset()
-            print("Mesure réinitialisée.")
-            continue
+            tracker.add_beat(timestamp)
+            display_result(tracker, GHOSTS)
 
-        tracker.add_beat(time.perf_counter())
-        display_result(tracker, GHOSTS)
+    except KeyboardInterrupt:
+        print("\nFermeture.")
+
+    finally:
+        listener.stop()
 
 
 if __name__ == "__main__":

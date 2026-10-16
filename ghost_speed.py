@@ -13,7 +13,7 @@ def bpm_adjustment(bpm, game_speed):
         return "No speed calculated yet."
     if game_speed is None:
         return "Game speed not provided. Normal speed will be used."
-    match (game_speed):
+    match game_speed:
         case "very_slow":
             bpm /= 0.5
         case "slow":
